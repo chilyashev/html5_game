@@ -15,14 +15,15 @@
             height: 100%;
             margin: 0;
          }
-        canvas{
+        #canvas{
+            width: 800px;
             outline:0;
             border:1px solid #000;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
         }
     </style>
 </head>
 <body id="body">
+<canvas width="800" height="600" id="canvas"></canvas>
 </body>
 </html>

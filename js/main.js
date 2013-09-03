@@ -26,23 +26,22 @@ var game = {
     g1: 0,
     init: function () {
         this.body = document.body;
-        this.canvas = document.createElement('canvas');
-        this.canvas.width = w = document.width;
-        this.canvas.height = h = document.height;
+        this.canvas = document.getElementById('canvas');
+        this.canvas.width = w = 800;
+        this.canvas.height = h = 600;
+        this.canvas.style.margin = "0 auto";
 
-        this.body.appendChild(this.canvas);
+        //this.body.appendChild(this.canvas);
 
-        log(window.innerWidth);
-        log(document.width)
         var ctx = this.context = this.canvas.getContext('2d');
-        ctx.canvas.width  = window.innerWidth;
-        ctx.canvas.height = window.innerHeight;
+        ctx.canvas.width  = w;
+        ctx.canvas.height = h;
         ctx.fillStyle = "#6666FF";
         ctx.fillRect(0, 0, w, h);
         ctx.fillStyle = "#000000";
         ctx.font="30px Arial";
         var str = "And thus some stuff shall happen.";
-        ctx.fillText(str, document.width/2-(str.length*8), 50);
+        ctx.fillText(str, w/2-(str.length*8), 50);
         this.loadPlayer();
     },
     loadPlayer: function () {
