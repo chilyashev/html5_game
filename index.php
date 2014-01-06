@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <title></title>
     <script src="js/libs/jquery.min.js"></script>
+    <script src="js/sprite.js"></script>
+    <script src="js/world.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/screen.js"></script>
+    <script src="js/cloud.js"></script>
+    <script src="js/entity.js"></script>
+    <script src="js/player.js"></script>
     <script src="js/core.js"></script>
     <script src="js/main.js"></script>
     <style type="text/css">

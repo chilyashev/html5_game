@@ -5,4 +5,4 @@ window.log = (ob) ->
 
 window.getAsset = (type, name) ->
   $.getJSON("assets/#{type}/#{name}.json").then (data) ->
-    data.items
+    
