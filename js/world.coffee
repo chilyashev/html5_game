@@ -1,14 +1,24 @@
 class @World
   context = null
-  clouds = []
+  clouds = [] # TODO: get rid of that
+  entities = []
   constructor: (@context) ->
-    for i in [1..15]
-      cx = Math.random() * 800
-      cy = Math.random() * 300
-      clouds.push(new Cloud(@context, 'assets/images/cloud.png', cx, cy))
+    @initEntities();
 
   update: () =>
     for cloud in clouds
       #log("delta: #{delta}")
       cloud.update(delta)
       cloud.draw()
+    for entity in entities
+      entity.update()
+      entity.draw()
+
+  initEntities: () =>
+    for i in [1..5]
+      cx = Math.random() * 800
+      cy = Math.random() * 300
+      clouds.push(new Cloud(@context, 'assets/images/cloud.png', cx, cy))
+    entities.push(new Player(@context))
+
+
