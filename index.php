@@ -12,6 +12,7 @@
     <script src="js/entity.js"></script>
     <script src="js/player.js"></script>
     <script src="js/core.js"></script>
+    <script src="js/input.js"></script>
     <script src="js/main.js"></script>
     <style type="text/css">
         *{
@@ -25,13 +26,14 @@
          }
         #canvas_holder{
             width: 800px;
+            height: 600px;
             outline:0;
             border:1px solid #000;
             margin: 0 auto;
         }
     </style>
 </head>
-<body>
+<body onkeydown="return inputHandler.keyDown(event)" onkeyup="return inputHandler.keyUp(event)" >
 <div id="canvas_holder">
 <canvas width="800" height="600" id="canvas"></canvas>
 </div>

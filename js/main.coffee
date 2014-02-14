@@ -4,7 +4,8 @@
 
 # Entry point
 $ ->
-  window.game = new Game(null);
+  window.inputHandler = new Input();
+  window.game = new Game();
   window.game.init()
   int = setInterval ->
     window.game.update()

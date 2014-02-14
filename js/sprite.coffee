@@ -5,7 +5,7 @@ class @Sprite
   x: 40
   y: 50
   image: new Image()
-  constructor: (@context, @sprite, @x, @y) ->
+  constructor: (@context, @sprite, @x, @y, @name) ->
     @image = new Image()
     @image.onload = () =>
       @context.drawImage(@image, @x, @y); # @TODO Make it use width and height
@@ -15,7 +15,7 @@ class @Sprite
   draw: () =>
     @context.drawImage(@image, @x, @y); # @TODO Make it use width and height
     @context.font = "Arial, 10px"
-    @context.fillText("x: #{@x.toFixed(2)}, y: #{@y.toFixed(2)}", @x+@width, @y)
+    #@context.fillText("x: #{@x.toFixed(2)}, y: #{@y.toFixed(2)}, #{@name}", @x+@width, @y)
 
   getBounds: () =>
 
